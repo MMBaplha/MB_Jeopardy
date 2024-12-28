@@ -71,7 +71,7 @@ function handleClick(evt) {
         $cell.text(clue.question);
         clue.showing = 'question';
     } else if (clue.showing === 'question') {
-        $cell.text(clue.answer).css('background-color', '#15A3C7'); //The correct answer background color cyan blue
+        $cell.text(clue.answer).css('background-color', '#7f3896'); //The correct answer background color cyan blue
         clue.showing = 'answer';
         $cell.addClass('not-allowed');
     } else {
@@ -88,7 +88,7 @@ function showLoadingView() {
 
 /* Hide loading spinner and enable the start button and show board after loading. */
 function hideLoadingView() {
-    $('#restart').text('Restart Game').prop('disabled', false);
+    $('#restart').text('Restart').prop('disabled', false);
     $('#spin-container').hide();
     $('#jeopardy').show();
 }
