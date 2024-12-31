@@ -71,7 +71,7 @@ function handleClick(evt) {
         $cell.text(clue.question);
         clue.showing = 'question';
     } else if (clue.showing === 'question') {
-        $cell.text(clue.answer).css('background-color', '#7f3896'); //The correct answer background color cyan blue
+        const bgcAnswer = $cell.text(clue.answer).css('background-color', '#7f3896'); //The correct answer background color cyan blue
         clue.showing = 'answer';
         $cell.addClass('not-allowed');
     } else {
