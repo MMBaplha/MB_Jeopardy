@@ -1,5 +1,6 @@
 const NUM_CATEGORIES = 6;
 const NUM_QUESTIONS_PER_CAT = 5;
+const count = 100;
 const API_URL = 'https://rithm-jeopardy.herokuapp.com/api/';
 
 let categories = [];
@@ -7,7 +8,7 @@ let categories = [];
 /* Get NUM_CATEGORIES random category IDs from API. */
 async function getCategoryIds() {
     const response = await axios.get(`${API_URL}categories`, {
-        params: { count: 100 },
+        params: { count },
     });
     const randomCategories = _.sampleSize(response.data, NUM_CATEGORIES); // Use Lodash to sample random categories
     return randomCategories.map(cat => cat.id);
@@ -71,7 +72,7 @@ function handleClick(evt) {
         $cell.text(clue.question);
         clue.showing = 'question';
     } else if (clue.showing === 'question') {
-        const bgcAnswer = $cell.text(clue.answer).css('background-color', '#7f3896'); //The correct answer background color cyan blue
+        const bgColor = $cell.text(clue.answer).css('background-color', '#7f3896'); //The correct answer background color cyan blue
         clue.showing = 'answer';
         $cell.addClass('not-allowed');
     } else {
