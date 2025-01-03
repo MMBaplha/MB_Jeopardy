@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeopardy Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Copse&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Jeopardy!</h1>
+        <button id="restart">Begin</button>
+    </header>
+    
+    <div id="spin-container" style="display: none;">
+        <i class="fa fa-spin fa-spinner"></i>
+    </div>
+    
+    <table id="jeopardy">
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="https://unpkg.com/lodash"></script>
+    <script src="app.js"></script>
+</body>
+</html>
